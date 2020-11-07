@@ -1,0 +1,2009 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>进制 | CornerCry's blog</title><meta name="author" content="CornerCry"><meta name="copyright" content="CornerCry"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一.课堂记录1.N进制的定义:由N个符号组成，逢N进一。2.进制间的转换   进制转换                    二进制 0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111   八进制 0 1 2 3 4 5 6 7 10 11 12 13 14 15 16 17   十进制 0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进制">
+<meta property="og:url" content="http://example.com/2020/11/07/%E8%BF%9B%E5%88%B6/index.html">
+<meta property="og:site_name" content="CornerCry&#39;s blog">
+<meta property="og:description" content="一.课堂记录1.N进制的定义:由N个符号组成，逢N进一。2.进制间的转换   进制转换                    二进制 0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111   八进制 0 1 2 3 4 5 6 7 10 11 12 13 14 15 16 17   十进制 0">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/null">
+<meta property="article:published_time" content="2020-11-07T07:35:19.000Z">
+<meta property="article:modified_time" content="2020-11-07T17:40:18.415Z">
+<meta property="article:author" content="CornerCry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2020/11/07/%E8%BF%9B%E5%88%B6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-11-08 01:40:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.jpg'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CornerCry's blog</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">进制</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-11-07T07:35:19.000Z" title="Created 2020-11-07 15:35:19">2020-11-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-11-07T17:40:18.415Z" title="Updated 2020-11-08 01:40:18">2020-11-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E4%B8%89%E6%9C%9F/">滴水逆向三期</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一-课堂记录"><a href="#一-课堂记录" class="headerlink" title="一.课堂记录"></a>一.课堂记录</h2><h3 id="1-N进制的定义-由N个符号组成，逢N进一。"><a href="#1-N进制的定义-由N个符号组成，逢N进一。" class="headerlink" title="1.N进制的定义:由N个符号组成，逢N进一。"></a>1.N进制的定义:由N个符号组成，逢N进一。</h3><h3 id="2-进制间的转换"><a href="#2-进制间的转换" class="headerlink" title="2.进制间的转换"></a>2.进制间的转换</h3><table>
+<thead>
+<tr>
+<th align="center">进制转换</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>二进制</strong></td>
+<td align="center">0000</td>
+<td align="center">0001</td>
+<td align="center">0010</td>
+<td align="center">0011</td>
+<td align="center">0100</td>
+<td align="center">0101</td>
+<td align="center">0110</td>
+<td align="center">0111</td>
+<td align="center">1000</td>
+<td align="center">1001</td>
+<td align="center">1010</td>
+<td align="center">1011</td>
+<td align="center">1100</td>
+<td align="center">1101</td>
+<td align="center">1110</td>
+<td align="center">1111</td>
+</tr>
+<tr>
+<td align="center"><strong>八进制</strong></td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">16</td>
+<td align="center">17</td>
+</tr>
+<tr>
+<td align="center"><strong>十进制</strong></td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">8</td>
+<td align="center">9</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+<td align="center">14</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center"><strong>十六进制</strong></td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">8</td>
+<td align="center">9</td>
+<td align="center">A</td>
+<td align="center">B</td>
+<td align="center">C</td>
+<td align="center">D</td>
+<td align="center">E</td>
+<td align="center">F</td>
+</tr>
+</tbody></table>
+<h3 id="3-八进制表"><a href="#3-八进制表" class="headerlink" title="3.八进制表"></a>3.八进制表</h3><table>
+<thead>
+<tr>
+<th align="center">八</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">16</td>
+<td align="center">17</td>
+<td align="center">20</td>
+<td align="center">21</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">23</td>
+<td align="center">24</td>
+<td align="center">25</td>
+<td align="center">26</td>
+<td align="center">27</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td align="center">31</td>
+<td align="center">32</td>
+<td align="center">33</td>
+<td align="center">34</td>
+<td align="center">35</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td align="center">37</td>
+<td align="center">40</td>
+<td align="center">41</td>
+<td align="center">42</td>
+<td align="center">43</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td align="center">45</td>
+<td align="center">46</td>
+<td align="center">47</td>
+<td align="center">50</td>
+<td align="center">51</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td align="center">53</td>
+<td align="center">54</td>
+<td align="center">55</td>
+<td align="center">56</td>
+<td align="center">57</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td align="center">61</td>
+<td align="center">62</td>
+<td align="center">63</td>
+<td align="center">64</td>
+<td align="center">65</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td align="center">67</td>
+<td align="center">70</td>
+<td align="center">71</td>
+<td align="center">72</td>
+<td align="center">73</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td align="center">75</td>
+<td align="center">76</td>
+<td align="center">77</td>
+<td align="center">100</td>
+<td align="center">101</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td align="center">103</td>
+<td align="center">104</td>
+<td align="center">105</td>
+<td align="center">106</td>
+<td align="center">107</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td align="center">111</td>
+<td align="center">112</td>
+<td align="center">113</td>
+<td align="center">114</td>
+<td align="center">115</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td align="center">117</td>
+<td align="center">120</td>
+<td align="center">121</td>
+<td align="center">122</td>
+<td align="center">123</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">加法表</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1+1 = 2</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+2 = 3</td>
+<td align="center">2+2 = 4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+3 = 4</td>
+<td align="center">2+3 = 5</td>
+<td align="center">3+3 = 6</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+4 = 5</td>
+<td align="center">2+4 = 6</td>
+<td align="center">3+4 = 7</td>
+<td align="center">4+4 = 10</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+5 = 6</td>
+<td align="center">2+5 = 7</td>
+<td align="center">3+5 = 10</td>
+<td align="center">4+5 = 11</td>
+<td align="center">5+5 = 12</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+6 = 7</td>
+<td align="center">2+6 = 10</td>
+<td align="center">3+6 = 11</td>
+<td align="center">4+6 = 12</td>
+<td align="center">5+6 = 13</td>
+<td align="center">6+6 = 14</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+7 = 10</td>
+<td align="center">2+7 = 11</td>
+<td align="center">3+7 = 12</td>
+<td align="center">4+7 = 13</td>
+<td align="center">5+7 = 14</td>
+<td align="center">6+7 = 15</td>
+<td align="center">7+7 = 16</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">乘法表</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1*1 = 1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*2 = 2</td>
+<td align="center">2*2 = 4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*3 = 3</td>
+<td align="center">2*3 = 6</td>
+<td align="center">3*3 = 11</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*4 = 4</td>
+<td align="center">2*4 = 10</td>
+<td align="center">3*4 = 14</td>
+<td align="center">4*4 = 20</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*5 = 5</td>
+<td align="center">2*5 = 12</td>
+<td align="center">3*5 = 17</td>
+<td align="center">4*5 = 24</td>
+<td align="center">5*5 = 31</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*6 = 6</td>
+<td align="center">2*6 = 14</td>
+<td align="center">3*6 = 22</td>
+<td align="center">4*6 = 30</td>
+<td align="center">5*6 = 36</td>
+<td align="center">6*6 = 44</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*7 = 7</td>
+<td align="center">2*7 = 16</td>
+<td align="center">3*7 = 25</td>
+<td align="center">4*7 = 34</td>
+<td align="center">5*/ = 43</td>
+<td align="center">6*7 = 52</td>
+<td align="center">7*7 = 61</td>
+</tr>
+</tbody></table>
+<h2 id="二-课堂练习"><a href="#二-课堂练习" class="headerlink" title="二.课堂练习"></a>二.课堂练习</h2><h3 id="1-二进制从0写到30-是30个数-。"><a href="#1-二进制从0写到30-是30个数-。" class="headerlink" title="1.二进制从0写到30(是30个数)。"></a>1.二进制从0写到30(是30个数)。</h3><p>​        </p>
+<table>
+<thead>
+<tr>
+<th align="center">二进制</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">100</td>
+<td align="center">101</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td align="center">111</td>
+<td align="center">1000</td>
+<td align="center">1001</td>
+<td align="center">1010</td>
+<td align="center">1011</td>
+</tr>
+<tr>
+<td align="center">1100</td>
+<td align="center">1101</td>
+<td align="center">1110</td>
+<td align="center">1111</td>
+<td align="center">10000</td>
+<td align="center">10001</td>
+</tr>
+<tr>
+<td align="center">10010</td>
+<td align="center">10011</td>
+<td align="center">10100</td>
+<td align="center">10101</td>
+<td align="center">10110</td>
+<td align="center">10111</td>
+</tr>
+<tr>
+<td align="center">11000</td>
+<td align="center">11001</td>
+<td align="center">11010</td>
+<td align="center">11011</td>
+<td align="center">11100</td>
+<td align="center">11101</td>
+</tr>
+</tbody></table>
+<h3 id="2-八进制从0写到80-是80个数-。"><a href="#2-八进制从0写到80-是80个数-。" class="headerlink" title="2.八进制从0写到80(是80个数)。"></a>2.八进制从0写到80(是80个数)。</h3><table>
+<thead>
+<tr>
+<th align="center">八进制</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">16</td>
+<td align="center">17</td>
+<td align="center">20</td>
+<td align="center">21</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">23</td>
+<td align="center">24</td>
+<td align="center">25</td>
+<td align="center">26</td>
+<td align="center">27</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td align="center">31</td>
+<td align="center">32</td>
+<td align="center">33</td>
+<td align="center">34</td>
+<td align="center">35</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td align="center">37</td>
+<td align="center">40</td>
+<td align="center">41</td>
+<td align="center">42</td>
+<td align="center">43</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td align="center">45</td>
+<td align="center">46</td>
+<td align="center">47</td>
+<td align="center">50</td>
+<td align="center">51</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td align="center">53</td>
+<td align="center">54</td>
+<td align="center">55</td>
+<td align="center">56</td>
+<td align="center">57</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td align="center">61</td>
+<td align="center">62</td>
+<td align="center">63</td>
+<td align="center">64</td>
+<td align="center">65</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td align="center">67</td>
+<td align="center">70</td>
+<td align="center">71</td>
+<td align="center">72</td>
+<td align="center">73</td>
+</tr>
+<tr>
+<td align="center">74</td>
+<td align="center">75</td>
+<td align="center">76</td>
+<td align="center">77</td>
+<td align="center">100</td>
+<td align="center">101</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td align="center">103</td>
+<td align="center">104</td>
+<td align="center">105</td>
+<td align="center">106</td>
+<td align="center">107</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td align="center">111</td>
+<td align="center">112</td>
+<td align="center">113</td>
+<td align="center">114</td>
+<td align="center">115</td>
+</tr>
+<tr>
+<td align="center">116</td>
+<td align="center">117</td>
+<td align="center">120</td>
+<td align="center">121</td>
+<td align="center">122</td>
+<td align="center">123</td>
+</tr>
+</tbody></table>
+<h2 id="三-课后练习"><a href="#三-课后练习" class="headerlink" title="三.课后练习"></a>三.课后练习</h2><h3 id="1-编制7进制加法表，乘法表，并计算下面的结果：23456-54356-？-5621-654-？-234-65-？"><a href="#1-编制7进制加法表，乘法表，并计算下面的结果：23456-54356-？-5621-654-？-234-65-？" class="headerlink" title="1.编制7进制加法表，乘法表，并计算下面的结果：23456+54356=？ 5621-654=？  234*65=？"></a>1.编制7进制加法表，乘法表，并计算下面的结果：23456+54356=？ 5621-654=？  234*65=？</h3><table>
+<thead>
+<tr>
+<th align="center">七</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+<td align="center">14</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center">16</td>
+<td align="center">20</td>
+<td align="center">21</td>
+<td align="center">22</td>
+<td align="center">23</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td align="center">25</td>
+<td align="center">26</td>
+<td align="center">30</td>
+<td align="center">31</td>
+<td align="center">32</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td align="center">34</td>
+<td align="center">35</td>
+<td align="center">36</td>
+<td align="center">40</td>
+<td align="center">41</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">43</td>
+<td align="center">44</td>
+<td align="center">45</td>
+<td align="center">46</td>
+<td align="center">50</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td align="center">52</td>
+<td align="center">53</td>
+<td align="center">54</td>
+<td align="center">55</td>
+<td align="center">56</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td align="center">61</td>
+<td align="center">62</td>
+<td align="center">63</td>
+<td align="center">64</td>
+<td align="center">65</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td align="center">100</td>
+<td align="center">101</td>
+<td align="center">102</td>
+<td align="center">103</td>
+<td align="center">104</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td align="center">106</td>
+<td align="center">110</td>
+<td align="center">111</td>
+<td align="center">112</td>
+<td align="center">113</td>
+</tr>
+<tr>
+<td align="center">114</td>
+<td align="center">115</td>
+<td align="center">116</td>
+<td align="center">120</td>
+<td align="center">121</td>
+<td align="center">122</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td align="center">124</td>
+<td align="center">125</td>
+<td align="center">126</td>
+<td align="center">130</td>
+<td align="center">131</td>
+</tr>
+<tr>
+<td align="center">132</td>
+<td align="center">133</td>
+<td align="center">134</td>
+<td align="center">135</td>
+<td align="center">136</td>
+<td align="center">140</td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="center">加法表</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1+1 = 2</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+2 = 3</td>
+<td align="center">2+2 = 4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+3 = 4</td>
+<td align="center">2+3 = 5</td>
+<td align="center">3+3 = 6</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+4 = 5</td>
+<td align="center">2+4 = 6</td>
+<td align="center">3+4 = 10</td>
+<td align="center">4+4 = 11</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+5 = 6</td>
+<td align="center">2+5 = 10</td>
+<td align="center">3+5 = 11</td>
+<td align="center">4+5 = 12</td>
+<td align="center">5+5 = 13</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+6 = 10</td>
+<td align="center">2+6 = 11</td>
+<td align="center">3+6 = 12</td>
+<td align="center">4+6 = 13</td>
+<td align="center">5+6 = 14</td>
+<td align="center">6+6 = 15</td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="center">乘法表</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1*1 = 1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*2 = 2</td>
+<td align="center">2*2 = 4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*3 = 3</td>
+<td align="center">2*3 = 6</td>
+<td align="center">3*3 = 12</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*4 = 4</td>
+<td align="center">2*4 = 11</td>
+<td align="center">3*4 = 15</td>
+<td align="center">4*4 = 22</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*5 = 5</td>
+<td align="center">2*5 = 13</td>
+<td align="center">3*5 = 21</td>
+<td align="center">4*5 = 26</td>
+<td align="center">5*5 = 34</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*6 = 6</td>
+<td align="center">2*6 = 15</td>
+<td align="center">3*6 = 24</td>
+<td align="center">4*6 = 33</td>
+<td align="center">5*6 = 42</td>
+<td align="center">6*6 = 51</td>
+</tr>
+</tbody></table>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">23456+54356 &#x3D; 111145				</span><br><span class="line">	23456		6+6 &#x3D; 5 进 1</span><br><span class="line">+	54356		5+5 &#x3D; 3+1 &#x3D; 4 进 1</span><br><span class="line">--------------	4+3 &#x3D; 0+1 &#x3D; 1 进 1</span><br><span class="line">   111145		3+4 &#x3D; 0+1 &#x3D; 1 进 1</span><br><span class="line">				2+5 &#x3D; 0+1 &#x3D; 1 进 1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">5621-654 &#x3D; 4634</span><br><span class="line">	5621		1-4 &#x3D; 4 借位 1</span><br><span class="line">-	 654		2-1-5 &#x3D; 3 借位 1</span><br><span class="line">--------------	6-1-6 &#x3D; 6 借位 1</span><br><span class="line">	4634		5-1 &#x3D; 4</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">234*65 &#x3D; </span><br><span class="line">	234			4*5 &#x3D; 6 进 2</span><br><span class="line">*	 65			3*5 &#x3D; 1+2 &#x3D; 3 进 2</span><br><span class="line">-------------	2*5 &#x3D; 3+2 &#x3D; 5 进 1</span><br><span class="line">   1536			4*6 &#x3D; 3 进 3</span><br><span class="line">  2103			3*6 &#x3D; 4+3 &#x3D; 0 进 3</span><br><span class="line">------------   	2*6 &#x3D; 5+3 &#x3D; 1 进 2</span><br><span class="line">  22566			6+0 &#x3D; 6</span><br><span class="line">				3+3 &#x3D; 6</span><br><span class="line">   				5+0 &#x3D; 5</span><br><span class="line">   				1+1 &#x3D; 2</span><br><span class="line">   				2+0 &#x3D; 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-编制16进制加法表，乘法表，并计算下面的结果：2D4E6-CF3A6-5FD1-E5A-2CA-A5"><a href="#2-编制16进制加法表，乘法表，并计算下面的结果：2D4E6-CF3A6-5FD1-E5A-2CA-A5" class="headerlink" title="2.编制16进制加法表，乘法表，并计算下面的结果：2D4E6+CF3A6=?  5FD1-E5A=?  2CA*A5=?"></a>2.编制16进制加法表，乘法表，并计算下面的结果：2D4E6+CF3A6=?  5FD1-E5A=?  2CA*A5=?</h3><table>
+<thead>
+<tr>
+<th align="center">十六</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">8</td>
+<td align="center">9</td>
+<td align="center">A</td>
+<td align="center">B</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">D</td>
+<td align="center">E</td>
+<td align="center">F</td>
+<td align="center">10</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center">13</td>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">16</td>
+<td align="center">17</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td align="center">19</td>
+<td align="center">1A</td>
+<td align="center">1B</td>
+<td align="center">1C</td>
+<td align="center">1D</td>
+</tr>
+<tr>
+<td align="center">1E</td>
+<td align="center">1F</td>
+<td align="center">20</td>
+<td align="center">21</td>
+<td align="center">22</td>
+<td align="center">23</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td align="center">25</td>
+<td align="center">26</td>
+<td align="center">27</td>
+<td align="center">28</td>
+<td align="center">29</td>
+</tr>
+<tr>
+<td align="center">2A</td>
+<td align="center">2B</td>
+<td align="center">2C</td>
+<td align="center">2D</td>
+<td align="center">2E</td>
+<td align="center">2F</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td align="center">31</td>
+<td align="center">32</td>
+<td align="center">33</td>
+<td align="center">34</td>
+<td align="center">35</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td align="center">37</td>
+<td align="center">38</td>
+<td align="center">39</td>
+<td align="center">3A</td>
+<td align="center">3B</td>
+</tr>
+<tr>
+<td align="center">3C</td>
+<td align="center">3D</td>
+<td align="center">3E</td>
+<td align="center">3F</td>
+<td align="center">40</td>
+<td align="center">41</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">43</td>
+<td align="center">44</td>
+<td align="center">45</td>
+<td align="center">46</td>
+<td align="center">47</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td align="center">49</td>
+<td align="center">4A</td>
+<td align="center">4B</td>
+<td align="center">4C</td>
+<td align="center">4D</td>
+</tr>
+<tr>
+<td align="center">4E</td>
+<td align="center">4F</td>
+<td align="center">50</td>
+<td align="center">51</td>
+<td align="center">52</td>
+<td align="center">53</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td align="center">55</td>
+<td align="center">56</td>
+<td align="center">57</td>
+<td align="center">58</td>
+<td align="center">59</td>
+</tr>
+<tr>
+<td align="center">5A</td>
+<td align="center">5B</td>
+<td align="center">5C</td>
+<td align="center">5D</td>
+<td align="center">5E</td>
+<td align="center">5F</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td align="center">61</td>
+<td align="center">62</td>
+<td align="center">63</td>
+<td align="center">64</td>
+<td align="center">65</td>
+</tr>
+<tr>
+<td align="center">66</td>
+<td align="center">67</td>
+<td align="center">68</td>
+<td align="center">69</td>
+<td align="center">6A</td>
+<td align="center">6B</td>
+</tr>
+<tr>
+<td align="center">6C</td>
+<td align="center">6D</td>
+<td align="center">6E</td>
+<td align="center">6F</td>
+<td align="center">70</td>
+<td align="center">71</td>
+</tr>
+<tr>
+<td align="center">72</td>
+<td align="center">73</td>
+<td align="center">74</td>
+<td align="center">75</td>
+<td align="center">76</td>
+<td align="center">77</td>
+</tr>
+<tr>
+<td align="center">78</td>
+<td align="center">79</td>
+<td align="center">7A</td>
+<td align="center">7B</td>
+<td align="center">7C</td>
+<td align="center">7D</td>
+</tr>
+<tr>
+<td align="center">7E</td>
+<td align="center">7F</td>
+<td align="center">80</td>
+<td align="center">81</td>
+<td align="center">82</td>
+<td align="center">83</td>
+</tr>
+<tr>
+<td align="center">84</td>
+<td align="center">85</td>
+<td align="center">86</td>
+<td align="center">87</td>
+<td align="center">88</td>
+<td align="center">89</td>
+</tr>
+<tr>
+<td align="center">8A</td>
+<td align="center">8B</td>
+<td align="center">8C</td>
+<td align="center">8D</td>
+<td align="center">8E</td>
+<td align="center">8F</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td align="center">91</td>
+<td align="center">92</td>
+<td align="center">93</td>
+<td align="center">94</td>
+<td align="center">95</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td align="center">97</td>
+<td align="center">98</td>
+<td align="center">99</td>
+<td align="center">9A</td>
+<td align="center">9B</td>
+</tr>
+<tr>
+<td align="center">9C</td>
+<td align="center">9D</td>
+<td align="center">9E</td>
+<td align="center">9F</td>
+<td align="center">A0</td>
+<td align="center">A1</td>
+</tr>
+<tr>
+<td align="center">A2</td>
+<td align="center">A3</td>
+<td align="center">A4</td>
+<td align="center">A5</td>
+<td align="center">A6</td>
+<td align="center">A7</td>
+</tr>
+<tr>
+<td align="center">A8</td>
+<td align="center">A9</td>
+<td align="center">AA</td>
+<td align="center">AB</td>
+<td align="center">AC</td>
+<td align="center">AD</td>
+</tr>
+<tr>
+<td align="center">AE</td>
+<td align="center">AF</td>
+<td align="center">B0</td>
+<td align="center">B1</td>
+<td align="center">B2</td>
+<td align="center">B3</td>
+</tr>
+<tr>
+<td align="center">B4</td>
+<td align="center">B5</td>
+<td align="center">B6</td>
+<td align="center">B7</td>
+<td align="center">B8</td>
+<td align="center">B9</td>
+</tr>
+<tr>
+<td align="center">BA</td>
+<td align="center">BB</td>
+<td align="center">BC</td>
+<td align="center">BD</td>
+<td align="center">BE</td>
+<td align="center">BF</td>
+</tr>
+<tr>
+<td align="center">C0</td>
+<td align="center">C1</td>
+<td align="center">C2</td>
+<td align="center">C3</td>
+<td align="center">C4</td>
+<td align="center">C5</td>
+</tr>
+<tr>
+<td align="center">C6</td>
+<td align="center">C7</td>
+<td align="center">C8</td>
+<td align="center">C9</td>
+<td align="center">CA</td>
+<td align="center">CB</td>
+</tr>
+<tr>
+<td align="center">CC</td>
+<td align="center">CD</td>
+<td align="center">CE</td>
+<td align="center">CF</td>
+<td align="center">D0</td>
+<td align="center">D1</td>
+</tr>
+<tr>
+<td align="center">D2</td>
+<td align="center">D3</td>
+<td align="center">D4</td>
+<td align="center">D5</td>
+<td align="center">D6</td>
+<td align="center">D7</td>
+</tr>
+<tr>
+<td align="center">D8</td>
+<td align="center">D9</td>
+<td align="center">DA</td>
+<td align="center">DB</td>
+<td align="center">DC</td>
+<td align="center">DD</td>
+</tr>
+<tr>
+<td align="center">DE</td>
+<td align="center">DF</td>
+<td align="center">E0</td>
+<td align="center">E1</td>
+<td align="center">E2</td>
+<td align="center">E3</td>
+</tr>
+<tr>
+<td align="center">E4</td>
+<td align="center">E5</td>
+<td align="center">E6</td>
+<td align="center">E7</td>
+<td align="center">E8</td>
+<td align="center">E9</td>
+</tr>
+<tr>
+<td align="center">EA</td>
+<td align="center">EB</td>
+<td align="center">EC</td>
+<td align="center">ED</td>
+<td align="center">EE</td>
+<td align="center">EF</td>
+</tr>
+<tr>
+<td align="center">F0</td>
+<td align="center">F1</td>
+<td align="center">F2</td>
+<td align="center">F3</td>
+<td align="center">F4</td>
+<td align="center">F5</td>
+</tr>
+<tr>
+<td align="center">F6</td>
+<td align="center">F7</td>
+<td align="center">F8</td>
+<td align="center">F9</td>
+<td align="center">FA</td>
+<td align="center">FB</td>
+</tr>
+<tr>
+<td align="center">FC</td>
+<td align="center">FD</td>
+<td align="center">FE</td>
+<td align="center">FF</td>
+<td align="center">100</td>
+<td align="center">101</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td align="center">103</td>
+<td align="center">104</td>
+<td align="center">105</td>
+<td align="center">106</td>
+<td align="center">107</td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="center">加法表</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1+1 = 2</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+2 = 3</td>
+<td align="center">2+2 = 4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+3 = 4</td>
+<td align="center">2+3 = 5</td>
+<td align="center">3+3 = 6</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+4 = 5</td>
+<td align="center">2+4 = 6</td>
+<td align="center">3+4 = 7</td>
+<td align="center">4+4 = 8</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+5 = 6</td>
+<td align="center">2+5 = 7</td>
+<td align="center">3+5 = 8</td>
+<td align="center">4+5 = 9</td>
+<td align="center">5+5 = A</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+6 = 7</td>
+<td align="center">2+6 = 8</td>
+<td align="center">3+6 = 9</td>
+<td align="center">4+6 = A</td>
+<td align="center">5+6 = B</td>
+<td align="center">6+6 = C</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+7 = 8</td>
+<td align="center">2+7 = 9</td>
+<td align="center">3+7 = A</td>
+<td align="center">4+7 = B</td>
+<td align="center">5+7 = C</td>
+<td align="center">6+7 = D</td>
+<td align="center">7+7 = E</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+8 = 9</td>
+<td align="center">2+8 = A</td>
+<td align="center">3+8 = B</td>
+<td align="center">4+8 = C</td>
+<td align="center">5+8 = D</td>
+<td align="center">6+8 = E</td>
+<td align="center">7+8 = F</td>
+<td align="center">8+8 = 10</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+9 = A</td>
+<td align="center">2+9 = B</td>
+<td align="center">3+9 = C</td>
+<td align="center">4+9 = D</td>
+<td align="center">5+9 = E</td>
+<td align="center">6+9 = F</td>
+<td align="center">7+9 = 10</td>
+<td align="center">8+9 = 11</td>
+<td align="center">9+9 = 12</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+A = B</td>
+<td align="center">2+A = C</td>
+<td align="center">3+A = D</td>
+<td align="center">4+A = E</td>
+<td align="center">5+A = F</td>
+<td align="center">6+A = 10</td>
+<td align="center">7+A =   11</td>
+<td align="center">8+A = 12</td>
+<td align="center">9+A = 13</td>
+<td align="center">A+A = 14</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+B = C</td>
+<td align="center">2+B = D</td>
+<td align="center">3+B = E</td>
+<td align="center">4+B = F</td>
+<td align="center">5+B = 10</td>
+<td align="center">6+B = 11</td>
+<td align="center">7+B = 12</td>
+<td align="center">8+B = 13</td>
+<td align="center">9+B = 14</td>
+<td align="center">A+B = 15</td>
+<td align="center">B+B = 16</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+C = D</td>
+<td align="center">2+C = E</td>
+<td align="center">3+C = F</td>
+<td align="center">4+C = 10</td>
+<td align="center">5+C = 11</td>
+<td align="center">6+C = 12</td>
+<td align="center">7+C = 13</td>
+<td align="center">8+C = 14</td>
+<td align="center">9+C = 15</td>
+<td align="center">A+C = 16</td>
+<td align="center">B+C = 17</td>
+<td align="center">C+C = 18</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+D = E</td>
+<td align="center">2+D = F</td>
+<td align="center">3+D = 10</td>
+<td align="center">4+D = 11</td>
+<td align="center">5+D = 12</td>
+<td align="center">6+D = 13</td>
+<td align="center">7+D = 14</td>
+<td align="center">8+D = 15</td>
+<td align="center">9+D = 16</td>
+<td align="center">A+D = 17</td>
+<td align="center">B+D = 18</td>
+<td align="center">C+D = 19</td>
+<td align="center">D+D = 1A</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+E = F</td>
+<td align="center">2+E = 10</td>
+<td align="center">3+E = 11</td>
+<td align="center">4+E = 12</td>
+<td align="center">5+E = 13</td>
+<td align="center">6+E = 14</td>
+<td align="center">7+E = 15</td>
+<td align="center">8+E = 16</td>
+<td align="center">9+E = 17</td>
+<td align="center">A+E = 18</td>
+<td align="center">B+E = 19</td>
+<td align="center">C+E = 1A</td>
+<td align="center">D+E = 1B</td>
+<td align="center">E+E = 1C</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1+F = 10</td>
+<td align="center">2+F = 11</td>
+<td align="center">3+F = 12</td>
+<td align="center">4+F = 13</td>
+<td align="center">5+F = 14</td>
+<td align="center">6+F = 15</td>
+<td align="center">7+F = 16</td>
+<td align="center">8+F = 17</td>
+<td align="center">9+F = 18</td>
+<td align="center">A+F = 19</td>
+<td align="center">B+F = 1A</td>
+<td align="center">C+F = 1B</td>
+<td align="center">D+F = 1C</td>
+<td align="center">E+F = 1D</td>
+<td align="center">F+F =  1E</td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="center">乘法表</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1*1 = 2</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*2 = 2</td>
+<td align="center">2*2 = 4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*3 = 3</td>
+<td align="center">2*3 = 6</td>
+<td align="center">3*3 = 9</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*4 = 4</td>
+<td align="center">2*4 = 8</td>
+<td align="center">3*4 = C</td>
+<td align="center">4*4 = 10</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*5 = 5</td>
+<td align="center">2*5 = A</td>
+<td align="center">3*5 = F</td>
+<td align="center">4*5 = 14</td>
+<td align="center">5*5 = 19</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*6 = 6</td>
+<td align="center">2*6 = C</td>
+<td align="center">3*6 = 12</td>
+<td align="center">4*6 = 18</td>
+<td align="center">5*6 = 1E</td>
+<td align="center">6*6 = 24</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*7 = 7</td>
+<td align="center">2*7 = E</td>
+<td align="center">3*7 = 15</td>
+<td align="center">4*7 = 1C</td>
+<td align="center">5*7 = 23</td>
+<td align="center">6*7 = 2A</td>
+<td align="center">7*7 = 31</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*8 = 8</td>
+<td align="center">2*8 = 10</td>
+<td align="center">3*8 = 18</td>
+<td align="center">4*8 = 20</td>
+<td align="center">5*8 = 28</td>
+<td align="center">6*8 = 30</td>
+<td align="center">7*8 = 38</td>
+<td align="center">8*8 = 40</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*9 = 9</td>
+<td align="center">2*9 = 12</td>
+<td align="center">3*9 = 1B</td>
+<td align="center">4*9 = 24</td>
+<td align="center">5*9 = 2D</td>
+<td align="center">6*9 = 36</td>
+<td align="center">7*9 = 3F</td>
+<td align="center">8*9 = 48</td>
+<td align="center">9*9 = 51</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*A = A</td>
+<td align="center">2*A = 14</td>
+<td align="center">3*A = 1E</td>
+<td align="center">4*A = 28</td>
+<td align="center">5*A = 32</td>
+<td align="center">6*A = 3C</td>
+<td align="center">7*A =   46</td>
+<td align="center">8*A = 50</td>
+<td align="center">9*A = 5A</td>
+<td align="center">A*A = 64</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*B = B</td>
+<td align="center">2*B = 16</td>
+<td align="center">3*B = 21</td>
+<td align="center">4*B = 2C</td>
+<td align="center">5*B = 37</td>
+<td align="center">6*B = 42</td>
+<td align="center">7*B = 4D</td>
+<td align="center">8*B = 58</td>
+<td align="center">9*B = 63</td>
+<td align="center">A*B = 6E</td>
+<td align="center">B*B = 79</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*C = C</td>
+<td align="center">2*C = 18</td>
+<td align="center">3*C = 24</td>
+<td align="center">4*C = 30</td>
+<td align="center">5*C = 3C</td>
+<td align="center">6*C = 48</td>
+<td align="center">7*C = 54</td>
+<td align="center">8*C = 60</td>
+<td align="center">9*C = 6C</td>
+<td align="center">A*C = 78</td>
+<td align="center">B*C = 84</td>
+<td align="center">C*C = 90</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*D = D</td>
+<td align="center">2*D = 1A</td>
+<td align="center">3*D = 27</td>
+<td align="center">4*D = 34</td>
+<td align="center">5*D = 41</td>
+<td align="center">6*D = 4E</td>
+<td align="center">7*D = 5B</td>
+<td align="center">8*D = 68</td>
+<td align="center">9*D = 75</td>
+<td align="center">A*D = 82</td>
+<td align="center">B*D = 8F</td>
+<td align="center">C*D = 9C</td>
+<td align="center">D*D = A9</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*E = E</td>
+<td align="center">2*E = 1C</td>
+<td align="center">3*E = 3A</td>
+<td align="center">4*E = 38</td>
+<td align="center">5*E = 46</td>
+<td align="center">6*E = 54</td>
+<td align="center">7*E = 62</td>
+<td align="center">8*E = 70</td>
+<td align="center">9*E = 7E</td>
+<td align="center">A*E = 8C</td>
+<td align="center">B*E = 9A</td>
+<td align="center">C*E = A8</td>
+<td align="center">D*E = B6</td>
+<td align="center">E*E = C4</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1*F = F</td>
+<td align="center">2*F = 1E</td>
+<td align="center">3*F = 3D</td>
+<td align="center">4*F = 3C</td>
+<td align="center">5*F = 4B</td>
+<td align="center">6*F = 5A</td>
+<td align="center">7*F = 69</td>
+<td align="center">8*F = 78</td>
+<td align="center">9*F = 87</td>
+<td align="center">A*F = 96</td>
+<td align="center">B*F = A5</td>
+<td align="center">C*F = B4</td>
+<td align="center">D*F = C3</td>
+<td align="center">E*F = D2</td>
+<td align="center">F*F =  E1</td>
+</tr>
+</tbody></table>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2D4E6+CF3A6 &#x3D; EF88C</span><br><span class="line">	204E6		6+6 &#x3D; C</span><br><span class="line">+	CF3A6		E+A &#x3D; 8 进 1</span><br><span class="line">----------		4+3 &#x3D; 7 + 1 &#x3D; 8</span><br><span class="line">	EF88C		0+F &#x3D; F</span><br><span class="line">				2+C &#x3D; E</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">5FD1-E5A &#x3D; 5177</span><br><span class="line">	5FD1		1-A &#x3D; 7 借位 1</span><br><span class="line">-	 E5A		D-1-5 &#x3D; 7</span><br><span class="line">---------		F-E &#x3D; 1</span><br><span class="line">	5177		5-0 &#x3D; 5</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">2CA*A5 &#x3D; </span><br><span class="line">	2CA			A*5 &#x3D; 2 进 3</span><br><span class="line">*	 A5			C*5 &#x3D; C+3 &#x3D; F 进 3</span><br><span class="line">---------		2*5 &#x3D; A+3 &#x3D; D</span><br><span class="line">	DF2			A*A &#x3D; 4 进 6</span><br><span class="line">+ 1BE4			C*A &#x3D; 8+6 &#x3D; E 进 7</span><br><span class="line">---------		2*A &#x3D; 4+7 &#x3D; B 进 1</span><br><span class="line">  1CC32			2+0 &#x3D; 2</span><br><span class="line">				F+4 &#x3D; 3 进 1</span><br><span class="line">				D+E &#x3D; B+1 &#x3D; C 进 1</span><br><span class="line">				B+0+1 &#x3D; C</span><br><span class="line">				1+0 &#x3D; 1</span><br></pre></td></tr></table></figure>
+
+<h2 id="四-作业"><a href="#四-作业" class="headerlink" title="四.作业"></a>四.作业</h2><h3 id="1-2-3-1-成立吗？说明理由。"><a href="#1-2-3-1-成立吗？说明理由。" class="headerlink" title="1.2+3=1 成立吗？说明理由。"></a>1.2+3=1 成立吗？说明理由。</h3><p>​            答“：成立，因为进制可以由任意符号组成。例如当前十进制为 (5,6,2,3,4,1,7,8,9,0)  2+3 = 1</p>
+<h3 id="2-将下面的二进制数用16进制表示"><a href="#2-将下面的二进制数用16进制表示" class="headerlink" title="2.将下面的二进制数用16进制表示"></a>2.将下面的二进制数用16进制表示</h3><p>​            1100    1011    0101    0100    1110    1011    0101    0111    1011    0100    1010    1011</p>
+<p>​                C        B            5            4            E        B            5        7            B            4        A            B</p>
+<h3 id="3-将下面的十六进制数用二进制表示"><a href="#3-将下面的十六进制数用二进制表示" class="headerlink" title="3.将下面的十六进制数用二进制表示"></a>3.将下面的十六进制数用二进制表示</h3><p>​            487FDC120ACE69B953FE</p>
+<p>​            0100 1000 0111 1111 1101 1100 0001 0010  0000 1010 1100 1110 0110 1001 1011 1001 0101 0011 1111 1110</p>
+<h3 id="4-二进制从0写道100（100个数）"><a href="#4-二进制从0写道100（100个数）" class="headerlink" title="4.二进制从0写道100（100个数）"></a>4.二进制从0写道100（100个数）</h3><table>
+<thead>
+<tr>
+<th align="center">二进制</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">100</td>
+<td align="center">101</td>
+<td align="center">110</td>
+<td align="center">111</td>
+<td align="center">1000</td>
+<td align="center">1001</td>
+</tr>
+<tr>
+<td align="center">1010</td>
+<td align="center">1011</td>
+<td align="center">1100</td>
+<td align="center">1101</td>
+<td align="center">1110</td>
+<td align="center">1111</td>
+<td align="center">10000</td>
+<td align="center">10001</td>
+<td align="center">10010</td>
+<td align="center">10011</td>
+</tr>
+<tr>
+<td align="center">10100</td>
+<td align="center">10101</td>
+<td align="center">10110</td>
+<td align="center">10111</td>
+<td align="center">11000</td>
+<td align="center">11001</td>
+<td align="center">11010</td>
+<td align="center">11011</td>
+<td align="center">11100</td>
+<td align="center">11101</td>
+</tr>
+<tr>
+<td align="center">11110</td>
+<td align="center">11111</td>
+<td align="center">100000</td>
+<td align="center">100001</td>
+<td align="center">100010</td>
+<td align="center">100011</td>
+<td align="center">100100</td>
+<td align="center">100101</td>
+<td align="center">100110</td>
+<td align="center">100111</td>
+</tr>
+<tr>
+<td align="center">101000</td>
+<td align="center">101001</td>
+<td align="center">101010</td>
+<td align="center">101011</td>
+<td align="center">101100</td>
+<td align="center">101101</td>
+<td align="center">101110</td>
+<td align="center">101111</td>
+<td align="center">110000</td>
+<td align="center">110001</td>
+</tr>
+<tr>
+<td align="center">110010</td>
+<td align="center">110011</td>
+<td align="center">110100</td>
+<td align="center">110101</td>
+<td align="center">110110</td>
+<td align="center">110111</td>
+<td align="center">111000</td>
+<td align="center">111001</td>
+<td align="center">111010</td>
+<td align="center">111011</td>
+</tr>
+<tr>
+<td align="center">111100</td>
+<td align="center">111101</td>
+<td align="center">111110</td>
+<td align="center">111111</td>
+<td align="center">1000000</td>
+<td align="center">1000001</td>
+<td align="center">1000010</td>
+<td align="center">1000011</td>
+<td align="center">1000100</td>
+<td align="center">1000101</td>
+</tr>
+<tr>
+<td align="center">1000110</td>
+<td align="center">1000111</td>
+<td align="center">1001000</td>
+<td align="center">1001001</td>
+<td align="center">1001010</td>
+<td align="center">1001011</td>
+<td align="center">1001100</td>
+<td align="center">1001101</td>
+<td align="center">1001110</td>
+<td align="center">1001111</td>
+</tr>
+<tr>
+<td align="center">1010000</td>
+<td align="center">1010001</td>
+<td align="center">1010010</td>
+<td align="center">1010011</td>
+<td align="center">1010100</td>
+<td align="center">1010101</td>
+<td align="center">1010110</td>
+<td align="center">1010111</td>
+<td align="center">1011000</td>
+<td align="center">1011001</td>
+</tr>
+<tr>
+<td align="center">1011010</td>
+<td align="center">1011011</td>
+<td align="center">1011100</td>
+<td align="center">1011101</td>
+<td align="center">1011110</td>
+<td align="center">1011111</td>
+<td align="center">1100000</td>
+<td align="center">1100001</td>
+<td align="center">1100010</td>
+<td align="center">1100011</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">CornerCry</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2020/11/07/%E8%BF%9B%E5%88%B6/">http://example.com/2020/11/07/%E8%BF%9B%E5%88%B6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/null" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/11/05/hello-world/"><img class="next-cover" src="/" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.jpg'" alt="avatar"/><div class="author-info__name">CornerCry</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/qq1245769786"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E8%AF%BE%E5%A0%82%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">一.课堂记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-N%E8%BF%9B%E5%88%B6%E7%9A%84%E5%AE%9A%E4%B9%89-%E7%94%B1N%E4%B8%AA%E7%AC%A6%E5%8F%B7%E7%BB%84%E6%88%90%EF%BC%8C%E9%80%A2N%E8%BF%9B%E4%B8%80%E3%80%82"><span class="toc-number">1.1.</span> <span class="toc-text">1.N进制的定义:由N个符号组成，逢N进一。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.2.</span> <span class="toc-text">2.进制间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%AB%E8%BF%9B%E5%88%B6%E8%A1%A8"><span class="toc-number">1.3.</span> <span class="toc-text">3.八进制表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E8%AF%BE%E5%A0%82%E7%BB%83%E4%B9%A0"><span class="toc-number">2.</span> <span class="toc-text">二.课堂练习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BB%8E0%E5%86%99%E5%88%B030-%E6%98%AF30%E4%B8%AA%E6%95%B0-%E3%80%82"><span class="toc-number">2.1.</span> <span class="toc-text">1.二进制从0写到30(是30个数)。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%AB%E8%BF%9B%E5%88%B6%E4%BB%8E0%E5%86%99%E5%88%B080-%E6%98%AF80%E4%B8%AA%E6%95%B0-%E3%80%82"><span class="toc-number">2.2.</span> <span class="toc-text">2.八进制从0写到80(是80个数)。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0"><span class="toc-number">3.</span> <span class="toc-text">三.课后练习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BC%96%E5%88%B67%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E8%A1%A8%EF%BC%8C%E4%B9%98%E6%B3%95%E8%A1%A8%EF%BC%8C%E5%B9%B6%E8%AE%A1%E7%AE%97%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%9A23456-54356-%EF%BC%9F-5621-654-%EF%BC%9F-234-65-%EF%BC%9F"><span class="toc-number">3.1.</span> <span class="toc-text">1.编制7进制加法表，乘法表，并计算下面的结果：23456+54356&#x3D;？ 5621-654&#x3D;？  234*65&#x3D;？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BC%96%E5%88%B616%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E8%A1%A8%EF%BC%8C%E4%B9%98%E6%B3%95%E8%A1%A8%EF%BC%8C%E5%B9%B6%E8%AE%A1%E7%AE%97%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%9A2D4E6-CF3A6-5FD1-E5A-2CA-A5"><span class="toc-number">3.2.</span> <span class="toc-text">2.编制16进制加法表，乘法表，并计算下面的结果：2D4E6+CF3A6&#x3D;?  5FD1-E5A&#x3D;?  2CA*A5&#x3D;?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E4%BD%9C%E4%B8%9A"><span class="toc-number">4.</span> <span class="toc-text">四.作业</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-1-%E6%88%90%E7%AB%8B%E5%90%97%EF%BC%9F%E8%AF%B4%E6%98%8E%E7%90%86%E7%94%B1%E3%80%82"><span class="toc-number">4.1.</span> <span class="toc-text">1.2+3&#x3D;1 成立吗？说明理由。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B0%86%E4%B8%8B%E9%9D%A2%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E7%94%A816%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA"><span class="toc-number">4.2.</span> <span class="toc-text">2.将下面的二进制数用16进制表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B0%86%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0%E7%94%A8%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA"><span class="toc-number">4.3.</span> <span class="toc-text">3.将下面的十六进制数用二进制表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BB%8E0%E5%86%99%E9%81%93100%EF%BC%88100%E4%B8%AA%E6%95%B0%EF%BC%89"><span class="toc-number">4.4.</span> <span class="toc-text">4.二进制从0写道100（100个数）</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/07/%E8%BF%9B%E5%88%B6/" title="进制">进制</a><time datetime="2020-11-07T07:35:19.000Z" title="Created 2020-11-07 15:35:19">2020-11-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2020/11/05/hello-world/" title="Hello World">Hello World</a><time datetime="2020-11-05T13:23:28.544Z" title="Created 2020-11-05 21:23:28">2020-11-05</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/js/ThreeCanvas.js"></script><script src="/js/snow.js"></script><script src="/js/snowFall.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
